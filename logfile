@@ -1,0 +1,34 @@
+2025-04-18 18:37:34.772 UTC [20856] LOG:  starting PostgreSQL 15.10 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.2.0, 64-bit
+2025-04-18 18:37:34.772 UTC [20856] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-18 18:37:34.775 UTC [20856] FATAL:  could not create lock file "/run/postgresql/.s.PGSQL.5432.lock": No such file or directory
+2025-04-18 18:37:34.777 UTC [20856] LOG:  database system is shut down
+2025-04-18 18:37:52.991 UTC [21005] LOG:  starting PostgreSQL 15.10 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.2.0, 64-bit
+2025-04-18 18:37:52.991 UTC [21005] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-18 18:37:52.993 UTC [21005] FATAL:  could not create lock file "/run/postgresql/.s.PGSQL.5432.lock": No such file or directory
+2025-04-18 18:37:52.995 UTC [21005] LOG:  database system is shut down
+2025-04-18 18:56:56.347 UTC [28200] LOG:  starting PostgreSQL 15.10 on x86_64-pc-linux-gnu, compiled by gcc (GCC) 13.2.0, 64-bit
+2025-04-18 18:56:56.347 UTC [28200] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2025-04-18 18:56:56.349 UTC [28200] LOG:  listening on Unix socket "/run/postgresql/.s.PGSQL.5432"
+2025-04-18 18:56:56.356 UTC [28204] LOG:  database system was shut down at 2025-04-18 18:56:29 UTC
+2025-04-18 18:56:56.363 UTC [28200] LOG:  database system is ready to accept connections
+2025-04-18 19:01:56.455 UTC [28202] LOG:  checkpoint starting: time
+2025-04-18 19:03:36.376 UTC [28202] LOG:  checkpoint complete: wrote 1001 buffers (6.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=99.895 s, sync=0.016 s, total=99.922 s; sync files=310, longest=0.001 s, average=0.001 s; distance=4824 kB, estimate=4824 kB
+2025-04-18 19:14:59.563 UTC [35184] LOG:  invalid length of startup packet
+2025-04-18 19:14:59.568 UTC [35185] LOG:  invalid length of startup packet
+2025-04-18 19:27:05.410 UTC [39249] FATAL:  role "nooralain" does not exist
+2025-04-18 19:27:19.838 UTC [39296] FATAL:  role "nooralain" does not exist
+2025-04-18 19:27:35.936 UTC [39345] FATAL:  role "nooralain" does not exist
+2025-04-18 19:27:38.269 UTC [39353] FATAL:  role "nooralain" does not exist
+2025-04-18 19:27:38.269 UTC [39354] FATAL:  role "nooralain" does not exist
+2025-04-18 19:27:54.624 UTC [39403] FATAL:  role "nooralain" does not exist
+2025-04-18 19:28:06.900 UTC [39444] FATAL:  role "nooralain" does not exist
+2025-04-18 19:28:06.900 UTC [39445] FATAL:  role "nooralain" does not exist
+2025-04-18 19:35:33.824 UTC [40810] FATAL:  role "nooralain" does not exist
+2025-04-18 19:37:31.698 UTC [41173] FATAL:  role "nooralain" does not exist
+2025-04-18 19:37:50.757 UTC [41232] FATAL:  role "nooralain" does not exist
+2025-04-18 19:37:58.377 UTC [41258] FATAL:  role "nooralain" does not exist
+2025-04-18 19:38:07.240 UTC [41286] FATAL:  role "nooralain" does not exist
+2025-04-18 19:38:22.852 UTC [41333] FATAL:  role "nooralain" does not exist
+2025-04-18 19:38:45.808 UTC [41404] FATAL:  role "nooralain" does not exist
+2025-04-18 19:44:09.308 UTC [42721] LOG:  invalid length of startup packet
+2025-04-18 19:44:09.311 UTC [42722] LOG:  invalid length of startup packet

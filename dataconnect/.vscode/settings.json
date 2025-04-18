@@ -1,0 +1,17 @@
+{
+    "IDX.aI.enableInlineCompletion": true,
+    "IDX.aI.enableCodebaseIndexing": true,
+    "sqltools.connections": [
+        {
+            "server": "34.100.132.138",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "database": "Nooralain DB",
+            "name": "Cloud SQL Connection",
+            "username": "nooralain",
+            "password": "Noorapp#2803",
+            "previewLimit": 50,
+            "pgOptions": {}
+        }
+    ]
+}

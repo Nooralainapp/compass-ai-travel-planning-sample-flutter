@@ -1,6 +1,277 @@
+extend type Activity {
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "Activity", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `Activity` table.
+  """
+  _count: Int! @fdc_generated(from: "Activity", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `description` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  description_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.description", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `destinationRef` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  destinationRef_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.destinationRef", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `duration` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  duration_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.duration", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `embedding` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  embedding_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.embedding", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `familyFriendly` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  familyFriendly_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.familyFriendly", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `imageUrl` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  imageUrl_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.imageUrl", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `locationName` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  locationName_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.locationName", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `name` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  name_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.name", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `placeRef` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  placeRef_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.placeRef", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `price` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  price_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.price", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `ref` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  ref_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.ref", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Activity` table where the `timeOfDay` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  timeOfDay_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Activity.timeOfDay", purpose: QUERY_COUNT)
+  """
+  ✨ Sum the `duration` field in the `Activity` table.
+  """
+  duration_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Activity.duration", purpose: QUERY_SUM)
+  """
+  ✨ Sum the `price` field in the `Activity` table.
+  """
+  price_sum(
+    """
+    Set to true to sum the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Activity.price", purpose: QUERY_SUM)
+  """
+  ✨ Average the `duration` field in the `Activity` table.
+  """
+  duration_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Activity.duration", purpose: QUERY_AVG)
+  """
+  ✨ Average the `price` field in the `Activity` table.
+  """
+  price_avg(
+    """
+    Set to true to average the distinct values.
+    """
+    distinct: Boolean = false
+  ): Float @fdc_generated(from: "Activity.price", purpose: QUERY_AVG)
+  """
+  ✨ Minimum of the `duration` field in the `Activity` table.
+  """
+  duration_min: Float @fdc_generated(from: "Activity.duration", purpose: QUERY_MIN)
+  """
+  ✨ Minimum of the `price` field in the `Activity` table.
+  """
+  price_min: Float @fdc_generated(from: "Activity.price", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `duration` field in the `Activity` table.
+  """
+  duration_max: Float @fdc_generated(from: "Activity.duration", purpose: QUERY_MAX)
+  """
+  ✨ Maximum of the `price` field in the `Activity` table.
+  """
+  price_max: Float @fdc_generated(from: "Activity.price", purpose: QUERY_MAX)
+}
 extend type Place {
   """
-  ✨ List Activity entries in a one-to-many relationship with this object (i.e. where `Activity.place` equals this object).
+  ✨ List `Activity` objects in a one-to-many relationship (where `Activity`.`place` is this object).
   """
-  activities_on_place(where: Activity_Filter, orderBy: [Activity_Order!], offset: Int, limit: Int = 100): [Activity!]! @fdc_generated(from: "Activity.place", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  activities_on_place(
+    """
+    Filter condition to narrow down the query results.
+    """
+    where: Activity_Filter
+
+    """
+    Order the query results by specific fields.
+    """
+    orderBy: [Activity_Order!]
+
+    """
+    Number of rows to skip before starting to return the results.
+    """
+    offset: Int
+
+    """
+    Maximum number of rows to return (defaults to 100 rows).
+    """
+    limit: Int = 100
+
+    """
+    Set to true to return distinct results.
+    """
+    distinct: Boolean = false
+
+    """
+    Filter condition to apply to the groups of aggregate queries.
+    """
+    having: Activity_Having
+  ): [Activity!]! @fdc_generated(from: "Activity.place", purpose: QUERY_MULTIPLE_ONE_TO_MANY)
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "Place", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `Place` table.
+  """
+  _count: Int! @fdc_generated(from: "Place", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Place` table where the `continent` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  continent_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Place.continent", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Place` table where the `country` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  country_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Place.country", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Place` table where the `embedding` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  embedding_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Place.embedding", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Place` table where the `imageUrl` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  imageUrl_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Place.imageUrl", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Place` table where the `knownFor` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  knownFor_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Place.knownFor", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Place` table where the `name` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  name_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Place.name", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `Place` table where the `ref` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  ref_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "Place.ref", purpose: QUERY_COUNT)
 }

@@ -62,8 +62,8 @@ class ResultsViewModel extends ChangeNotifier {
         }
       case Error():
         {
-          // TODO: Handle error
-          debugPrint(result.error.toString());
+          // Display a user-friendly error message
+          debugPrint('Error fetching destinations. Please try again later.');
         }
     }
 

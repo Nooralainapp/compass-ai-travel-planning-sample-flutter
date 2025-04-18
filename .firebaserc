@@ -1,5 +1,7 @@
 {
-  "projects": {},
+  "projects": {
+    "default": "monospace-9"
+  },
   "targets": {},
   "etags": {},
   "dataconnectEmulatorConfig": {

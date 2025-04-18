@@ -220,14 +220,17 @@ class _ActivityTileState extends State<ActivityTile> {
           Container(
             width: 80,
             height: 80,
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(
                 Radius.circular(8),
               ),
-              image: DecorationImage(
-                fit: BoxFit.cover,
-                image: CachedNetworkImageProvider(widget.activity.imageUrl),
-              ), // b
+            ),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: CachedNetworkImage(
+                imageUrl: widget.activity.imageUrl, fit: BoxFit.cover,
+                placeholder: (context, url) => Image.asset('assets/images/image.png', fit: BoxFit.cover),
+                errorWidget: (context, url, error) => const Placeholder(),),
             ),
           ),
           Expanded(
@@ -321,16 +324,20 @@ class _ActivityCardState extends State<ActivityCard> {
         },
         child: ClipRRect(
             borderRadius: BorderRadius.circular(10.0),
-            // TODO: Improve image loading and caching
             child: SizedBox(
                 width: 400,
                 height: 400,
                 child: Stack(fit: StackFit.expand, children: [
                   Image(
-                      image:
-                          CachedNetworkImageProvider(widget.activity.imageUrl),
-                      fit: BoxFit.fitHeight),
+                    image: CachedNetworkImageProvider(
+                      widget.activity.imageUrl,
+                    ),
+                    fit: BoxFit.fitHeight,
+                    errorBuilder: (context, error, stackTrace) =>
+                        const Placeholder(),
+                  ),
                   Positioned(right: 24, top: 24, child: _buildCheck(context)),
+
                   Positioned(
                       bottom: 32.0,
                       left: 16.0,

@@ -34,6 +34,7 @@ class ActivitiesViewModel extends ChangeNotifier {
   List<LegacyActivity> _activities = [];
   bool _loading = false;
   String? _location;
+  String? _errorMessage;
 
   /// List of destinations, may be empty but never null
   List<LegacyActivity> get activities => _activities;
@@ -43,10 +44,15 @@ class ActivitiesViewModel extends ChangeNotifier {
 
   /// Return a formatted String with all the filter options
   String get filters => _location ?? '';
+  
+  /// Error Message
+  String? get errorMessage => _errorMessage;
 
   /// Perform search
   Future<void> search({String? location}) async {
     // Set loading state and notify the view
+    _errorMessage = null;
+
     _loading = true;
     _location = location;
     notifyListeners();
@@ -62,8 +68,8 @@ class ActivitiesViewModel extends ChangeNotifier {
         }
       case Error():
         {
-          // TODO: Handle error
           debugPrint(result.error.toString());
+          _errorMessage = "Failed to load activities. Please try again later.";
         }
     }
 

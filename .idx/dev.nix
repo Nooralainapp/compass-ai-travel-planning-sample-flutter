@@ -21,11 +21,6 @@
       GOOGLE_API_KEY = "REPLACE_ME";
       MAPS_API_KEY = "";
     };
-    processes = {
-      postgresRun = {
-        command = "postgres -D ./local -k /tmp";
-      };
-    };
     idx.extensions = [
       "Dart-Code.flutter"
       "mtxr.sqltools-driver-pg"

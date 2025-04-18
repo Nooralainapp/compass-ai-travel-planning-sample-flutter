@@ -44,21 +44,30 @@ class _LegacyFormScreenState extends State<LegacyFormScreen> {
     var location = selectedLocation;
     var date = tripDateRange;
 
-    if (location == null || date == null) return;
-    // TODO: Show alert asking for location and date
+    if (location != null && date != null) {
+      context.read<TravelPlan>().setQuery(
+            TravelQuery(location: location, dates: date, numPeople: numPeople),
+          );
 
-    context.read<TravelPlan>().setQuery(
-          TravelQuery(location: location, dates: date, numPeople: numPeople),
-        );
+      context.read<ResultsViewModel>().search(continent: location);
 
-    context.read<ResultsViewModel>().search(continent: location);
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => const ResultsScreen(),
+        ),
+      );
+    } else {
+      showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+                title: const Text('Missing Information'),
+                content: const Text(
+                    'Please select both a location and a date for your trip.'),
+                actions: [TextButton(onPressed: () => Navigator.pop(context), child: const Text('OK'))],
+              ));
+    }
 
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => const ResultsScreen(),
-      ),
-    );
   }
 
   AppBar _buildAppBar() {
